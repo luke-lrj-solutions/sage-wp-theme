@@ -1,0 +1,32 @@
+@use 'viewports' as *;
+@use 'variables' as *;
+
+@use "sass:map";
+
+// -----------**               **----------- //
+// -----------** Media Queries **----------- //
+// -----------**               **----------- //
+
+@mixin above_size($size) {
+  $breakpoint: map.get($breakpoints, $size);
+
+  @if $breakpoint {
+    @media (min-width: #{$breakpoint}) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoint '#{$size}' not found in \$breakpoints map.";
+  }
+}
+
+@mixin below_size($size) {
+  $breakpoint: map.get($breakpoints, $size);
+
+  @if $breakpoint {
+    @media (max-width: #{$breakpoint}) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoint '#{$size}' not found in \$breakpoints map.";
+  }
+}

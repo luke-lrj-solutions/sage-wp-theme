@@ -1,0 +1,5 @@
+@use 'sass/main';
+@import "tailwindcss" theme(static);
+@source "../views/";
+@source "../../app/";
+
