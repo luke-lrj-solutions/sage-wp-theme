@@ -1,5 +1,10 @@
-@use 'sass/main';
-@import "tailwindcss" theme(static);
+// Abstracts
+@use "sass/abstracts";
+
+// Base
+@use "sass/base";
+
+
 @source "../views/";
 @source "../../app/";
 
