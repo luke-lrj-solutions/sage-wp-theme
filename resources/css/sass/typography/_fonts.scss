@@ -1,0 +1,17 @@
+@use '../index' as *;
+
+// -----------**           **----------- //
+// -----------** Font Face **----------- //
+// -----------**           **----------- //
+
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@fonts/montserrat/montserrat-v29-latin-100.woff2') format('woff2'),
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
